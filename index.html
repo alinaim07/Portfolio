@@ -46,17 +46,27 @@
       </div>
       <button class="arrow right" id="exp-arrow-right" onclick="scrollList('experience-list', 1, 'exp-arrow-left', 'exp-arrow-right')">&#8594;</button>
     </section>
-    <section>
+    <section class="horizontal-section">
       <h2>Certifications</h2>
-      <ul>
-        <li>
-          <strong>Microsoft Office Specialist</strong> | Jul 2021
+      <button class="arrow left" id="certs-arrow-left" onclick="scrollList('certs-list', -1, 'certs-arrow-left', 'certs-arrow-right')">&#8592;</button>
+      <div class="horizontal-list" id="certs-list">
+        <div class="card">
+          <div class="card-header">
+            <strong>Microsoft Office Specialist</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Jul 2021</span>
+            <span class="card-org">Microsoft</span>
+          </div>
           <ul>
             <li>Microsoft Office Word 2016</li>
             <li>Credential ID: CzLR-DwB9</li>
           </ul>
-        </li>
-      </ul>
+          <img src="assets/Images/Cert_Office.jpg" alt="Microsoft Office Specialist Certificate" class="certificate-img">
+        </div>
+        <!-- Add more certification cards here if needed -->
+      </div>
+      <button class="arrow right" id="certs-arrow-right" onclick="scrollList('certs-list', 1, 'certs-arrow-left', 'certs-arrow-right')">&#8594;</button>
     </section>
     <section class="horizontal-section">
       <h2>Honors and Awards</h2>
@@ -70,7 +80,8 @@
             <span class="card-date">2 May 2025</span>
             <span class="card-org">AUST</span>
           </div>
-          <div class="card-rank rank-third">Third Place</div>
+          <div class="card-rank rank">Third Place</div>
+          <img src="assets/Images/CyberComp_aust.jpg" alt="National Cybersecurity CTF Award" class="certificate-img">
         </div>
         <div class="card">
           <div class="card-header">
@@ -80,7 +91,8 @@
             <span class="card-date">23 April 2025</span>
             <span class="card-org">USJ</span>
           </div>
-          <div class="card-rank rank-third">Third Place</div>
+          <div class="card-rank rank">Third Place</div>
+          <img src="assets/Images/USJ_VQ.jpg" alt="Diplome USJ" class="certificate-img">
         </div>
         <div class="card">
           <div class="card-header">
@@ -90,7 +102,8 @@
             <span class="card-date">May 2024</span>
             <span class="card-org">AEFE</span>
           </div>
-          <div class="card-rank rank-distinction">Mention Très Bien</div>
+          <div class="card-rank rank">Mention Très Bien</div>
+          <img src="assets/Images/Olym_math.jpg" alt="Diplome Olympiade de math" class="certificate-img">
         </div>
         <div class="card">
           <div class="card-header">
@@ -100,7 +113,8 @@
             <span class="card-date">Sep 2023</span>
             <span class="card-org">AUB</span>
           </div>
-          <div class="card-rank rank-first">First Place</div>
+          <div class="card-rank rank">First Place</div>
+          <img src="assets/Images/ICPC.jpg" alt="ICPC Certificate" class="certificate-img">
         </div>
         <div class="card">
           <div class="card-header">
@@ -110,7 +124,7 @@
             <span class="card-date">Jul 2023</span>
             <span class="card-org">AUST</span>
           </div>
-          <div class="card-rank rank-first">First Place</div>
+          <div class="card-rank rank">First Place</div>
         </div>
         <div class="card">
           <div class="card-header">
@@ -120,7 +134,8 @@
             <span class="card-date">Apr 2023</span>
             <span class="card-org">AUST</span>
           </div>
-          <div class="card-rank rank-third">Third Place</div>
+          <div class="card-rank rank">Third Place</div>
+          <img src="assets/Images/programming2023.jpg" alt="Certificate for 2023 coding competition" class="certificate-img">
         </div>
         <div class="card">
           <div class="card-header">
@@ -130,7 +145,8 @@
             <span class="card-date">Feb 2023</span>
             <span class="card-org">AEFE</span>
           </div>
-          <div class="card-rank rank-top10">10th Place in Lebanon</div>
+          <div class="card-rank rank">10th Place in Lebanon</div>
+          <img src="assets/Images/Alkindi.jpg" alt="Alkindi certificate" class="certificate-img">
         </div>
         <div class="card">
           <div class="card-header">
@@ -140,57 +156,94 @@
             <span class="card-date">Jul 2021</span>
             <span class="card-org">Microsoft</span>
           </div>
-          <div class="card-rank rank-second">Second Place in Lebanon</div>
+          <div class="card-rank rank">Second Place in Lebanon</div>
+          <img src="assets/Images/MOS_leb.jpg" alt="Microsoft Office Specialist Certificate" class="certificate-img">
         </div>
       </div>
       <button class="arrow right" id="awards-arrow-right" onclick="scrollList('awards-list', 1, 'awards-arrow-left', 'awards-arrow-right')">&#8594;</button>
     </section>
-    <section>
+    <section class="horizontal-section">
       <h2>Bug Bounty</h2>
-      <ul>
-        <li>
-          <strong>SchoolMouv.fr</strong> | Feb 2025
+      <button class="arrow left" id="bug-arrow-left" onclick="scrollList('bug-list', -1, 'bug-arrow-left', 'bug-arrow-right')">&#8592;</button>
+      <div class="horizontal-list" id="bug-list">
+        <div class="card">
+          <div class="card-header">
+            <strong>SchoolMouv.fr</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Feb 2025</span>
+            <span class="card-org">SchoolMouv.fr</span>
+          </div>
           <ul>
             <li>Unauthorized Access to API - Discovered and responsibly reported an improper access control vulnerability, allowing unauthorized users to access sensitive endpoints. CVSS 3.1 Score: 7.5 (High)</li>
             <li>Exposed Amazon S3 Bucket - Identified a publicly accessible S3 bucket containing sensitive files, breaching cloud storage configuration best practices. CVSS 3.1 Score: 7.5 (High)</li>
           </ul>
-        </li>
-      </ul>
+        </div>
+        <!-- Add more bug bounty cards here if needed -->
+      </div>
+      <button class="arrow right" id="bug-arrow-right" onclick="scrollList('bug-list', 1, 'bug-arrow-left', 'bug-arrow-right')">&#8594;</button>
     </section>
-    <section>
+    <section class="horizontal-section">
       <h2>Courses</h2>
-      <ul>
-        <li>
-          <strong>Robotics & Coding Course</strong> | Feb - Mar 2025 | AUST
+      <button class="arrow left" id="courses-arrow-left" onclick="scrollList('courses-list', -1, 'courses-arrow-left', 'courses-arrow-right')">&#8592;</button>
+      <div class="horizontal-list" id="courses-list">
+        <div class="card">
+          <div class="card-header">
+            <strong>Robotics & Coding Course</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Feb - Mar 2025</span>
+            <span class="card-org">AUST</span>
+          </div>
           <ul>
             <li>Learned the fundamentals of Python programming and Tkinter GUI development.</li>
             <li>Gained practical experience controlling a DOBOT Magician V2 robotic arm through code.</li>
             <li>Programmed the robotic arm to perform task-based actions, including playing a wire loop game, focusing on precision and sensor feedback.</li>
           </ul>
-        </li>
-        <li>
-          <strong>Ethical Hacking Course</strong> | Jan - Mar 2025 | SecureChek
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Ethical Hacking Course</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Jan - Mar 2025</span>
+            <span class="card-org">SecureChek</span>
+          </div>
           <ul>
             <li>Learned foundational techniques in web application security, including XSS, SQL injection, directory traversal, session exploitation, and brute-force attacks.</li>
             <li>Gained hands-on experience using tools such as Burp Suite, Nmap, Python, Bash, and Linux.</li>
             <li>Studied key vulnerabilities based on the OWASP Top 10 security risks.</li>
           </ul>
-        </li>
-        <li>
-          <strong>Engineering Summer Camp</strong> | July 2023 | AUST
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Engineering Summer Camp</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">July 2023</span>
+            <span class="card-org">AUST</span>
+          </div>
           <ul>
             <li>Designed, coded, and implemented remotely controlled cars, using an Arduino kit, later tested in a Formula 1-style competition.</li>
             <li>Gained hands-on experience in embedded systems, robotics, and team-based engineering problem-solving.</li>
           </ul>
-        </li>
-        <li>
-          <strong>Python Coding Course</strong> | Feb - May 2023 | AUST
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Python Coding Course</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Feb - May 2023</span>
+            <span class="card-org">AUST</span>
+          </div>
           <ul>
             <li>Attended weekly Saturday sessions focused on Python fundamentals, problem-solving techniques, and algorithm design.</li>
             <li>Trained specifically for participation in the AUST Competitive Programming Competition, held on May 6, 2023.</li>
           </ul>
-        </li>
-      </ul>
+        </div>
+        <!-- Add more course cards here if needed -->
+      </div>
+      <button class="arrow right" id="courses-arrow-right" onclick="scrollList('courses-list', 1, 'courses-arrow-left', 'courses-arrow-right')">&#8594;</button>
     </section>
   </main>
   <footer>
@@ -245,24 +298,48 @@ function updateCardFade(listId) {
 // Initialize arrow visibility and card fade on page load and resize
 window.addEventListener('DOMContentLoaded', () => {
   updateArrows('experience-list', 'exp-arrow-left', 'exp-arrow-right');
+  updateArrows('certs-list', 'certs-arrow-left', 'certs-arrow-right');
   updateArrows('awards-list', 'awards-arrow-left', 'awards-arrow-right');
+  updateArrows('bug-list', 'bug-arrow-left', 'bug-arrow-right');
+  updateArrows('courses-list', 'courses-arrow-left', 'courses-arrow-right');
   updateCardFade('experience-list');
+  updateCardFade('certs-list');
   updateCardFade('awards-list');
+  updateCardFade('bug-list');
+  updateCardFade('courses-list');
 
   document.getElementById('experience-list').addEventListener('scroll', () => {
     updateArrows('experience-list', 'exp-arrow-left', 'exp-arrow-right');
     updateCardFade('experience-list');
   });
+  document.getElementById('certs-list').addEventListener('scroll', () => {
+    updateArrows('certs-list', 'certs-arrow-left', 'certs-arrow-right');
+    updateCardFade('certs-list');
+  });
   document.getElementById('awards-list').addEventListener('scroll', () => {
     updateArrows('awards-list', 'awards-arrow-left', 'awards-arrow-right');
     updateCardFade('awards-list');
   });
+  document.getElementById('bug-list').addEventListener('scroll', () => {
+    updateArrows('bug-list', 'bug-arrow-left', 'bug-arrow-right');
+    updateCardFade('bug-list');
+  });
+  document.getElementById('courses-list').addEventListener('scroll', () => {
+    updateArrows('courses-list', 'courses-arrow-left', 'courses-arrow-right');
+    updateCardFade('courses-list');
+  });
 });
 window.addEventListener('resize', () => {
   updateArrows('experience-list', 'exp-arrow-left', 'exp-arrow-right');
+  updateArrows('certs-list', 'certs-arrow-left', 'certs-arrow-right');
   updateArrows('awards-list', 'awards-arrow-left', 'awards-arrow-right');
+  updateArrows('bug-list', 'bug-arrow-left', 'bug-arrow-right');
+  updateArrows('courses-list', 'courses-arrow-left', 'courses-arrow-right');
   updateCardFade('experience-list');
+  updateCardFade('certs-list');
   updateCardFade('awards-list');
+  updateCardFade('bug-list');
+  updateCardFade('courses-list');
 });
   </script>
 </body>

@@ -209,6 +209,15 @@ footer {
   font-weight: 500;
   margin-left: auto;
 }
+.certificate-img {
+  width: 100%;
+  max-width: 50vw;
+  margin: 1em auto 0 auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+}
 .card-rank {
   font-size: 1.05em;
   font-weight: 700;
@@ -221,11 +230,7 @@ footer {
   color: #0077b5;
   border: 2px solid #d0d7de;
 }
-.rank-first,
-.rank-second,
-.rank-third,
-.rank-distinction,
-.rank-top10 {
+.rank {
   background: #e9ecef;
   color: #0077b5;
   border: 2px solid #d0d7de;
@@ -246,12 +251,6 @@ footer {
 @media (max-width: 500px) {
   .horizontal-list {
     padding: 1em 2vw; /* even less padding for very small screens */
-  }
-  .card {
-    flex: 0 0 98vw;
-    max-width: 98vw;
-    min-width: 180px;
-    scroll-snap-align: center;
   }
   .contact-buttons .btn {
     font-size: 1em;
