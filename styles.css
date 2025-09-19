@@ -101,22 +101,44 @@ footer {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 1em;
-  padding: 1em 0;
+  gap: 2em;
+  padding: 2em 0; /* Remove horizontal padding here */
+  min-width: 100%;
+  scroll-snap-type: x mandatory;
+  justify-content: flex-start;
+  position: relative;
+}
+.horizontal-list:empty {
+  min-height: 200px;
+}
+.horizontal-list::before,
+.horizontal-list::after {
+  content: "";
+  flex: 0 0 calc(0.5 * 65vw); /* Dynamically half of card width */
 }
 .card {
-  min-width: 320px;
-  max-width: 340px;
+  flex: 0 0 65vw;
+  max-width: 420px;
+  min-width: 280px;
+  min-height: 320px;
   background: #f8fafc;
   border-radius: 16px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.07);
   padding: 1.2em 1em;
-  flex: 0 0 auto;
   border: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin-bottom: 0.5em;
+  scroll-snap-align: center;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 1;
+  transform: scale(1);
+}
+.card.faded {
+  opacity: 0.4;
+  transform: scale(0.95);
 }
 .arrow {
   position: absolute;
@@ -132,6 +154,13 @@ footer {
   cursor: pointer;
   z-index: 2;
   opacity: 0.8;
+  transition: opacity 0.2s;
+  display: block;
+}
+.arrow[aria-hidden="true"] {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
 }
 .arrow.left { left: 0.5em; }
 .arrow.right { right: 0.5em; }
@@ -148,17 +177,26 @@ footer {
 .card-meta {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   font-size: 0.98em;
   margin-bottom: 0.7em;
   color: #555;
 }
-.card-date,
+.card-date {
+  background: #e9ecef;
+  color: #222;
+  border-radius: 6px;
+  padding: 0.2em 0.7em;
+  font-weight: 500;
+  margin-right: auto;
+}
 .card-org {
   background: #e9ecef;
   color: #222;
   border-radius: 6px;
   padding: 0.2em 0.7em;
   font-weight: 500;
+  margin-left: auto;
 }
 .card-rank {
   font-size: 1.05em;
@@ -182,12 +220,29 @@ footer {
   border: 2px solid #d0d7de;
 }
 @media (max-width: 800px) {
+  body {
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+  }
   main {
-    padding: 1em;
-    max-width: 98vw;
+    padding: 0.5em;
+    max-width: 100vw;
   }
   .profile-pic {
     width: 90px;
     height: 90px;
+  }
+  .horizontal-list {
+    padding: 2em 5vw; /* less padding for small screens */
+  }
+  .horizontal-list::before,
+  .horizontal-list::after {
+    flex: 0 0 5vw; /* Half of card width for mobile (90vw / 2) */
+  }
+  .card {
+    flex: 0 0 90vw;
+    max-width: 98vw;
+    min-width: 220px;
+    scroll-snap-align: center;
   }
 }

@@ -21,19 +21,28 @@
       <h2>CV</h2>
       <a href="https://drive.google.com/file/d/1DVxQtIqJJcVnnXAXGIbviuEUU-zB-6Rs/view?usp=sharing" target="_blank">Download My Latest CV</a>
     </section>
-    <section>
+    <section class="horizontal-section">
       <h2>Professional Experience</h2>
-      <ul>
-        <li>
-          <strong>Student Intern</strong> | June 2023 | Mac-Corp (Lebanon)
+      <button class="arrow left" id="exp-arrow-left" onclick="scrollList('experience-list', -1, 'exp-arrow-left', 'exp-arrow-right')">&#8592;</button>
+      <div class="horizontal-list" id="experience-list">
+        <div class="card">
+          <div class="card-header">
+            <strong>Student Intern</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">June 2023</span>
+            <span class="card-org">Mac-Corp (Lebanon)</span>
+          </div>
           <ul>
             <li>Assisted in the installation and setup of new fire alarm systems to ensure compliance with safety standards.</li>
             <li>Performed diagnostics and repairs on malfunctioning access control systems.</li>
             <li>Supported the planning of infrastructure and system upgrades, contributing to improved reliability and efficiency.</li>
             <li>Conducted routine testing and maintenance of fire alarm systems to maintain operational readiness.</li>
           </ul>
-        </li>
-      </ul>
+        </div>
+        <!-- Add more experience cards here if needed -->
+      </div>
+      <button class="arrow right" id="exp-arrow-right" onclick="scrollList('experience-list', 1, 'exp-arrow-left', 'exp-arrow-right')">&#8594;</button>
     </section>
     <section>
       <h2>Certifications</h2>
@@ -49,7 +58,7 @@
     </section>
     <section class="horizontal-section">
       <h2>Honors and Awards</h2>
-      <button class="arrow left" onclick="scrollList('awards-list', -1)">&#8592;</button>
+      <button class="arrow left" id="awards-arrow-left" onclick="scrollList('awards-list', -1, 'awards-arrow-left', 'awards-arrow-right')">&#8592;</button>
       <div class="horizontal-list" id="awards-list">
         <div class="card">
           <div class="card-header">
@@ -132,7 +141,7 @@
           <div class="card-rank rank-second">Second Place in Lebanon</div>
         </div>
       </div>
-      <button class="arrow right" onclick="scrollList('awards-list', 1)">&#8594;</button>
+      <button class="arrow right" id="awards-arrow-right" onclick="scrollList('awards-list', 1, 'awards-arrow-left', 'awards-arrow-right')">&#8594;</button>
     </section>
     <section>
       <h2>Bug Bounty</h2>
@@ -186,11 +195,73 @@
     <p>&copy; 2025 Ali Naim</p>
   </footer>
   <script>
-    function scrollList(listId, direction) {
-      const list = document.getElementById(listId);
-      const scrollAmount = 130; // Adjust this value to control the scroll amount
-      list.scrollLeft += direction * scrollAmount;
+function scrollList(listId, direction, arrowLeftId, arrowRightId) {
+  const list = document.getElementById(listId);
+  const cards = Array.from(list.querySelectorAll('.card'));
+  const cardWidth = cards[0] ? cards[0].offsetWidth + 32 : 240; // 32px for gap
+  const currentScroll = list.scrollLeft;
+  const targetScroll = currentScroll + direction * cardWidth;
+  list.scrollTo({ left: targetScroll, behavior: 'smooth' });
+  setTimeout(() => {
+    updateArrows(listId, arrowLeftId, arrowRightId);
+    updateCardFade(listId);
+  }, 350);
+}
+
+function updateArrows(listId, arrowLeftId, arrowRightId) {
+  const list = document.getElementById(listId);
+  const arrowLeft = document.getElementById(arrowLeftId);
+  const arrowRight = document.getElementById(arrowRightId);
+  if (list.scrollLeft <= 5) {
+    arrowLeft.setAttribute('aria-hidden', 'true');
+  } else {
+    arrowLeft.setAttribute('aria-hidden', 'false');
+  }
+  if (list.scrollWidth - list.clientWidth - list.scrollLeft <= 5) {
+    arrowRight.setAttribute('aria-hidden', 'true');
+  } else {
+    arrowRight.setAttribute('aria-hidden', 'false');
+  }
+}
+
+function updateCardFade(listId) {
+  const list = document.getElementById(listId);
+  const cards = Array.from(list.querySelectorAll('.card'));
+  const listRect = list.getBoundingClientRect();
+  const center = listRect.left + listRect.width / 2;
+  cards.forEach(card => {
+    const cardRect = card.getBoundingClientRect();
+    const cardCenter = cardRect.left + cardRect.width / 2;
+    if (Math.abs(cardCenter - center) < cardRect.width / 2) {
+      card.classList.remove('faded');
+    } else {
+      card.classList.add('faded');
     }
+  });
+}
+
+// Initialize arrow visibility and card fade on page load and resize
+window.addEventListener('DOMContentLoaded', () => {
+  updateArrows('experience-list', 'exp-arrow-left', 'exp-arrow-right');
+  updateArrows('awards-list', 'awards-arrow-left', 'awards-arrow-right');
+  updateCardFade('experience-list');
+  updateCardFade('awards-list');
+
+  document.getElementById('experience-list').addEventListener('scroll', () => {
+    updateArrows('experience-list', 'exp-arrow-left', 'exp-arrow-right');
+    updateCardFade('experience-list');
+  });
+  document.getElementById('awards-list').addEventListener('scroll', () => {
+    updateArrows('awards-list', 'awards-arrow-left', 'awards-arrow-right');
+    updateCardFade('awards-list');
+  });
+});
+window.addEventListener('resize', () => {
+  updateArrows('experience-list', 'exp-arrow-left', 'exp-arrow-right');
+  updateArrows('awards-list', 'awards-arrow-left', 'awards-arrow-right');
+  updateCardFade('experience-list');
+  updateCardFade('awards-list');
+});
   </script>
 </body>
 </html>
