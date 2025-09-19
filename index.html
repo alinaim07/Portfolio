@@ -7,9 +7,9 @@
 </head>
 <body>
   <header>
-    <img src="assets/Images/My_photo.svg" alt="Ali Naim" class="profile-pic">
+    <img src="assets/Images/My_Photo.png" alt="Ali Naim" class="profile-pic">
     <h1>Ali Naim</h1>
-    <p>Cybersecurity Enthusiast | Certifications & Awards Showcase</p>
+    <p>Driven to Master Cybersecurity & Advanced Engineering</p>
     <div class="contact-buttons">
       <a href="https://wa.me/96181940256" target="_blank" class="btn whatsapp">WhatsApp</a>
       <a href="https://www.linkedin.com/in/alinaim2007/" target="_blank" class="btn linkedin">LinkedIn</a>
@@ -22,25 +22,175 @@
       <a href="https://drive.google.com/file/d/1DVxQtIqJJcVnnXAXGIbviuEUU-zB-6Rs/view?usp=sharing" target="_blank">Download My Latest CV</a>
     </section>
     <section>
-      <h2>Certifications</h2>
+      <h2>Professional Experience</h2>
       <ul>
-        <li>TryHackMe: <a href="https://tryhackme.com/p/virous360" target="_blank">Profile</a></li>
-        <li>Google Cybersecurity Certificate</li>
-        <li>Cisco Networking Basics</li>
-        <!-- Add more certifications here -->
+        <li>
+          <strong>Student Intern</strong> | June 2023 | Mac-Corp (Lebanon)
+          <ul>
+            <li>Assisted in the installation and setup of new fire alarm systems to ensure compliance with safety standards.</li>
+            <li>Performed diagnostics and repairs on malfunctioning access control systems.</li>
+            <li>Supported the planning of infrastructure and system upgrades, contributing to improved reliability and efficiency.</li>
+            <li>Conducted routine testing and maintenance of fire alarm systems to maintain operational readiness.</li>
+          </ul>
+        </li>
       </ul>
     </section>
     <section>
-      <h2>Awards</h2>
+      <h2>Certifications</h2>
       <ul>
-        <li>Top 1% TryHackMe Learner</li>
-        <li>School Cybersecurity Competition Winner</li>
-        <!-- Add more awards here -->
+        <li>
+          <strong>Microsoft Office Specialist</strong> | Jul 2021
+          <ul>
+            <li>Microsoft Office Word 2016</li>
+            <li>Credential ID: CzLR-DwB9</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section class="horizontal-section">
+      <h2>Honors and Awards</h2>
+      <button class="arrow left" onclick="scrollList('awards-list', -1)">&#8592;</button>
+      <div class="horizontal-list" id="awards-list">
+        <div class="card">
+          <div class="card-header">
+            <strong>National Cybersecurity CTF Competition</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">2 May 2025</span>
+            <span class="card-org">AUST</span>
+          </div>
+          <div class="card-rank rank-third">Third Place</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Concours national 2025, Vision quantique</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">23 April 2025</span>
+            <span class="card-org">USJ</span>
+          </div>
+          <div class="card-rank rank-third">Third Place</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Olympiades Nationales de Mathématiques</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">May 2024</span>
+            <span class="card-org">AEFE</span>
+          </div>
+          <div class="card-rank rank-distinction">Mention Très Bien</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>ICPC (Lebanon)</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Sep 2023</span>
+            <span class="card-org">AUB</span>
+          </div>
+          <div class="card-rank rank-first">First Place</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Engineering Summer Camp Competition</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Jul 2023</span>
+            <span class="card-org">AUST</span>
+          </div>
+          <div class="card-rank rank-first">First Place</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Programming Competition for High School Students</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Apr 2023</span>
+            <span class="card-org">AUST</span>
+          </div>
+          <div class="card-rank rank-third">Third Place</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Alkindi Cybersecurity Challenge</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Feb 2023</span>
+            <span class="card-org">AEFE</span>
+          </div>
+          <div class="card-rank rank-top10">10th Place in Lebanon</div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <strong>Microsoft Office Specialist Championship</strong>
+          </div>
+          <div class="card-meta">
+            <span class="card-date">Jul 2021</span>
+            <span class="card-org">Microsoft</span>
+          </div>
+          <div class="card-rank rank-second">Second Place in Lebanon</div>
+        </div>
+      </div>
+      <button class="arrow right" onclick="scrollList('awards-list', 1)">&#8594;</button>
+    </section>
+    <section>
+      <h2>Bug Bounty</h2>
+      <ul>
+        <li>
+          <strong>SchoolMouv.fr</strong> | Feb 2025
+          <ul>
+            <li>Unauthorized Access to API - Discovered and responsibly reported an improper access control vulnerability, allowing unauthorized users to access sensitive endpoints. CVSS 3.1 Score: 7.5 (High)</li>
+            <li>Exposed Amazon S3 Bucket - Identified a publicly accessible S3 bucket containing sensitive files, breaching cloud storage configuration best practices. CVSS 3.1 Score: 7.5 (High)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Courses</h2>
+      <ul>
+        <li>
+          <strong>Robotics & Coding Course</strong> | Feb - Mar 2025 | AUST
+          <ul>
+            <li>Learned the fundamentals of Python programming and Tkinter GUI development.</li>
+            <li>Gained practical experience controlling a DOBOT Magician V2 robotic arm through code.</li>
+            <li>Programmed the robotic arm to perform task-based actions, including playing a wire loop game, focusing on precision and sensor feedback.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Ethical Hacking Course</strong> | Jan - Mar 2025 | SecureChek
+          <ul>
+            <li>Learned foundational techniques in web application security, including XSS, SQL injection, directory traversal, session exploitation, and brute-force attacks.</li>
+            <li>Gained hands-on experience using tools such as Burp Suite, Nmap, Python, Bash, and Linux.</li>
+            <li>Studied key vulnerabilities based on the OWASP Top 10 security risks.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Engineering Summer Camp</strong> | July 2023 | AUST
+          <ul>
+            <li>Designed, coded, and implemented remotely controlled cars, using an Arduino kit, later tested in a Formula 1-style competition.</li>
+            <li>Gained hands-on experience in embedded systems, robotics, and team-based engineering problem-solving.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Python Coding Course</strong> | Feb - May 2023 | AUST
+          <ul>
+            <li>Attended weekly Saturday sessions focused on Python fundamentals, problem-solving techniques, and algorithm design.</li>
+            <li>Trained specifically for participation in the AUST Competitive Programming Competition, held on May 6, 2023.</li>
+          </ul>
+        </li>
       </ul>
     </section>
   </main>
   <footer>
     <p>&copy; 2025 Ali Naim</p>
   </footer>
+  <script>
+    function scrollList(listId, direction) {
+      const list = document.getElementById(listId);
+      const scrollAmount = 130; // Adjust this value to control the scroll amount
+      list.scrollLeft += direction * scrollAmount;
+    }
+  </script>
 </body>
 </html>
