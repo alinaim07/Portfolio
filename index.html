@@ -4,17 +4,24 @@
   <meta charset="UTF-8">
   <title>Ali Naim - Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="assets/Images/My_Photo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/Images/My_Picture.svg">
 </head>
 <body>
   <header>
-    <img id="profile-pic" alt="Ali Naim" class="profile-pic">
-    <h1 id="name"></h1>
-    <p id="moto" class="moto"></p>
-    <div class="contact-buttons">
-      <a id="whatsapp" target="_blank" class="btn whatsapp">WhatsApp</a>
-      <a id="linkedin" target="_blank" class="btn linkedin">LinkedIn</a>
-      <a id="email" class="btn email">Email</a>
+    <div class="banner"></div>
+    <div class="header-content">
+      <img id="profile-pic" alt="Ali Naim" class="profile-pic">
+      <div class="header-info">
+        <div class="name-moto">
+          <h1 id="name"></h1>
+          <p id="moto" class="moto"></p>
+        </div>
+        <div class="contact-buttons">
+          <a id="whatsapp" target="_blank" class="btn whatsapp">WhatsApp</a>
+          <a id="linkedin" target="_blank" class="btn linkedin">LinkedIn</a>
+          <a id="email" class="btn email">Email</a>
+        </div>
+      </div>
     </div>
   </header>
   <main>
@@ -61,12 +68,19 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Ali Naim</p>
+    <p>&copy; 2026 Ali Naim</p>
   </footer>
   <script>
 fetch('data.json')
   .then(response => response.json())
-  .then(data => populate(data))
+  .then(data => {
+    populate(data);
+    if (data.profile && data.profile.banner) {
+      const banner = document.querySelector('.banner');
+      banner.classList.add('custom');
+      banner.style.backgroundImage = `url('${data.profile.banner}')`;
+    }
+  })
   .catch(error => console.error('Error loading data:', error));
 
 function populate(data) {

@@ -1,7 +1,8 @@
 {
   "profile": {
+    "banner": "assets/Images/Banner.png",
     "name": "Ali Naim",
-    "photo": "assets/Images/My_Photo.png",
+    "photo": "assets/Images/My Picture.png",
     "moto": "Driven to Master Cybersecurity & Advanced Engineering",
     "contacts": {
       "whatsapp": "https://wa.me/96181940256",
@@ -9,7 +10,7 @@
       "email": "mailto:alihusseinnaim2007@gmail.com"
     }
   },
-  "cv": "assets/CV/CV_August25.PDF",
+  "cv": "assets/CV/CV_25.pdf",
   "experience": [
     {
       "title": "Student Intern",
