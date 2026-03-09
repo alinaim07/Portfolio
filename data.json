@@ -1,0 +1,152 @@
+{
+  "profile": {
+    "name": "Ali Naim",
+    "photo": "assets/Images/My_Photo.png",
+    "moto": "Driven to Master Cybersecurity & Advanced Engineering",
+    "contacts": {
+      "whatsapp": "https://wa.me/96181940256",
+      "linkedin": "https://www.linkedin.com/in/alinaim2007/",
+      "email": "mailto:alihusseinnaim2007@gmail.com"
+    }
+  },
+  "cv": "assets/CV/CV_August25.PDF",
+  "experience": [
+    {
+      "title": "Student Intern",
+      "date": "June 2023",
+      "org": "Mac-Corp (Lebanon)",
+      "details": [
+        "Assisted in the installation and setup of new fire alarm systems to ensure compliance with safety standards.",
+        "Performed diagnostics and repairs on malfunctioning access control systems.",
+        "Supported the planning of infrastructure and system upgrades, contributing to improved reliability and efficiency.",
+        "Conducted routine testing and maintenance of fire alarm systems to maintain operational readiness."
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "title": "Microsoft Office Specialist",
+      "date": "Jul 2021",
+      "org": "Microsoft",
+      "details": [
+        "Microsoft Office Word 2016",
+        "Credential ID: CzLR-DwB9"
+      ],
+      "image": "assets/Images/Cert_Office.jpg"
+    }
+  ],
+  "awards": [
+    {
+      "title": "ICPC (Lebanon)",
+      "date": "Sep 2023",
+      "org": "AUB",
+      "rank": "First Place",
+      "image": "assets/Images/ICPC.jpg"
+    },
+    {
+      "title": "Olympiades Nationales de Mathématiques",
+      "date": "May 2024",
+      "org": "AEFE",
+      "rank": "Mention Très Bien",
+      "image": "assets/Images/Olym_math.jpg"
+    },
+    {
+      "title": "Engineering Summer Camp Competition",
+      "date": "Jul 2023",
+      "org": "AUST",
+      "rank": "First Place"
+    },
+    {
+      "title": "Microsoft Office Specialist Championship",
+      "date": "Jul 2021",
+      "org": "Microsoft",
+      "rank": "Second Place in Lebanon",
+      "image": "assets/Images/MOS_leb.jpg"
+    },
+    {
+      "title": "National Cybersecurity CTF Competition",
+      "date": "2 May 2025",
+      "org": "AUST",
+      "rank": "Third Place",
+      "image": "assets/Images/CyberComp_aust.jpg"
+    },
+    {
+      "title": "Concours national 2025, Vision quantique",
+      "date": "23 April 2025",
+      "org": "USJ",
+      "rank": "Third Place",
+      "image": "assets/Images/USJ_VQ.jpg"
+    },
+    {
+      "title": "Engineering Summer Camp Competition",
+      "date": "Jul 2023",
+      "org": "AUST",
+      "rank": "First Place"
+    },
+    {
+      "title": "Programming Competition for High School Students",
+      "date": "Apr 2023",
+      "org": "AUST",
+      "rank": "Third Place",
+      "image": "assets/Images/programming2023.jpg"
+    },
+    {
+      "title": "Alkindi Cybersecurity Challenge",
+      "date": "Feb 2023",
+      "org": "AEFE",
+      "rank": "10th Place in Lebanon",
+      "image": "assets/Images/Alkindi.jpg"
+    }
+  ],
+  "bugBounty": [
+    {
+      "title": "SchoolMouv.fr",
+      "date": "Feb 2025",
+      "org": "SchoolMouv.fr",
+      "details": [
+        "Unauthorized Access to API - Discovered and responsibly reported an improper access control vulnerability, allowing unauthorized users to access sensitive endpoints. CVSS 3.1 Score: 7.5 (High)",
+        "Exposed Amazon S3 Bucket - Identified a publicly accessible S3 bucket containing sensitive files, breaching cloud storage configuration best practices. CVSS 3.1 Score: 7.5 (High)"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "title": "Robotics & Coding Course",
+      "date": "Feb - Mar 2025",
+      "org": "AUST",
+      "details": [
+        "Learned the fundamentals of Python programming and Tkinter GUI development.",
+        "Gained practical experience controlling a DOBOT Magician V2 robotic arm through code.",
+        "Programmed the robotic arm to perform task-based actions, including playing a wire loop game, focusing on precision and sensor feedback."
+      ]
+    },
+    {
+      "title": "Ethical Hacking Course",
+      "date": "Jan - Mar 2025",
+      "org": "SecureChek",
+      "details": [
+        "Learned foundational techniques in web application security, including XSS, SQL injection, directory traversal, session exploitation, and brute-force attacks.",
+        "Gained hands-on experience using tools such as Burp Suite, Nmap, Python, Bash, and Linux.",
+        "Studied key vulnerabilities based on the OWASP Top 10 security risks."
+      ]
+    },
+    {
+      "title": "Engineering Summer Camp",
+      "date": "July 2023",
+      "org": "AUST",
+      "details": [
+        "Designed, coded, and implemented remotely controlled cars, using an Arduino kit, later tested in a Formula 1-style competition.",
+        "Gained hands-on experience in embedded systems, robotics, and team-based engineering problem-solving."
+      ]
+    },
+    {
+      "title": "Python Coding Course",
+      "date": "Feb - May 2023",
+      "org": "AUST",
+      "details": [
+        "Attended weekly Saturday sessions focused on Python fundamentals, problem-solving techniques, and algorithm design.",
+        "Trained specifically for participation in the AUST Competitive Programming Competition, held on May 6, 2023."
+      ]
+    }
+  ]
+}
