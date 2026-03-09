@@ -52,7 +52,7 @@ header {
   gap: 2em;
   padding: 1em 5vw 0em 5vw;
   align-items: flex-start;
-  height: fit-content;
+  height: 20vw;
   margin-top: 0;
   margin-bottom: 0;
   position: relative;
